@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Card</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Poppins:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Background Particles Container -->
+    <div id="particles"></div>
+
+    <!-- Music Player Control -->
+    <div class="music-control" onclick="toggleMusic()">
+        <i class="fas fa-play" id="music-icon"></i>
+    </div>
+    <audio id="bg-music" loop>
+        <!-- Placeholder for music. Ideally user provides a file or we use a royalty free link if available. 
+             For now, I'll leave src empty or use a common safe placeholder if possible, 
+             but the user requested "Can't Help Falling in Love" instrumental. 
+             I will add a comment to replace it. -->
+        <source src="music.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div class="container">
+        <header>
+            <h1 class="title">Selamat Ulang Tahun, <br> <span class="highlight">Sayang Akuuyy!</span></h1>
+        </header>
+
+        <section class="card glass-effect">
+            <div class="message-container">
+                <p class="greeting-text">
+                    Semoga di umur yang ke 21 ini adek bisa capai semua impian dan targetnya,
+                    adek bisa berkembang sesuai dengan keinginan. <br><br>
+                    Setiap detik bersamamu adalah anugerah terindah.
+                    Melihat senyummu adalah bahagiaku.
+                    Semoga hari ini menjadi awal dari tahun yang penuh cinta, tawa, dan keajaiban.
+                    <br><br>
+                    <strong>LOVEYOU SO MUCH ❤️</strong>
+                </p>
+            </div>
+        </section>
+
+        <section class="gallery-section">
+            <div class="gallery-container">
+                <!-- Images will be cycled via JS or CSS -->
+                <div class="slide fade">
+                    <img src="photo1.png" alt="Kenangan 1">
+                </div>
+                <div class="slide fade">
+                    <img src="photo2.png" alt="Kenangan 2">
+                </div>
+                <div class="slide fade">
+                    <img src="photo3.png" alt="Kenangan 3">
+                </div>
+                <div class="slide fade">
+                    <img src="photo4.png" alt="Kenangan 4">
+                </div>
+            </div>
+        </section>
+
+        <section class="interaction-section">
+            <button class="surprise-btn" onclick="showSurprise()">
+                <i class="fas fa-gift"></i> Klik untuk kejutan
+            </button>
+        </section>
+
+        <footer>
+            <p>Selalu dan selamanya, <br> <strong class="signature-text">Calon Suami Kamu</strong></p>
+        </footer>
+    </div>
+
+    <!-- Secret Message Modal -->
+    <div id="secret-modal" class="modal">
+        <div class="modal-content glass-effect">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2>Untuk Belahan Jiwaku 💖</h2>
+            <p class="secret-text">
+                Aku janji akan selalu ada di sampingmu, mendukung setiap langkahmu,
+                dan mencintaimu lebih dari hari kemarin.
+                Terima kasih sudah lahir ke dunia ini dan menjadi bagian dari hidupku.
+                <br><br>
+                Happy Birthday, Sayang! 🎉
+            </p>
+        </div>
+    </div>
+
+    <!-- Canvas Confetti Library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
